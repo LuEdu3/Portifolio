@@ -17,9 +17,9 @@ body {
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 1500px;
     margin: 0 auto;
-    padding: 2rem
+    padding: 1rem 0.75rem;
 }
 
 .main {
@@ -29,19 +29,22 @@ body {
 }
 
 .card {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
-    padding: 2rem;
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.04);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+    padding: 2rem 0;
     opacity: 0;
-    transform: translateY(24px);
-    transition: all .7s cubic-bezier(.2, .9, .2, 1)
+    transform: translateY(18px);
+    transition: all .6s cubic-bezier(.2, .9, .2, 1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04)
 }
 
 .card.visible {
     opacity: 1;
     transform: none
+}
+
+.card.flat {
+    background: transparent;
+    border-radius: 0;
+    padding: 2.5rem 0
 }
 
 .hero-content {
@@ -76,9 +79,7 @@ body {
 }
 
 .project-card {
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.02);
-    border-radius: 6px
+    padding: 1rem 0
 }
 
 .project-card h3 {
@@ -120,6 +121,21 @@ textarea {
     border: none;
     color: #012;
     cursor: pointer;
+    border-radius: 6px
+}
+
+.vertical-line {
+    display: block;
+    width: 2px;
+    height: 60px;
+    background: linear-gradient(180deg, var(--accent), transparent);
+    margin: 1.2rem auto;
+}
+
+/* imagens user-supplied */
+.assets-img {
+    max-width: 100%;
+    height: auto;
     border-radius: 6px
 }
 
