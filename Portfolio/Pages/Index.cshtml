@@ -1,0 +1,62 @@
+@page
+@model dynamic
+
+<main class="main">
+  <section class="card hero" id="hero">
+    <div class="hero-content">
+      <img src="/images/profile-placeholder.png" alt="Foto do Luiz" class="avatar" />
+      <div class="bio">
+        <h1>Luiz Brandao</h1>
+        <p>Desenvolvedor .NET e entusiasta de soluções web. Trabalho com projetos como Lista-de-Compras, Gerenciador-De-Hotel, Cadastrar_Tarefas e Meus_Gastos.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="card projects" id="projects">
+    <h2>Projetos</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>Lista-de-Compras</h3>
+        <p>App para criar listas de compras com persistência local e sincronização simples.</p>
+        <a href="https://github.com/LuEdu3/Lista-de-Compras" target="_blank">Ver no GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>Gerenciador-De-Hotel</h3>
+        <p>Sistema para gerenciamento de reservas, quartos e faturamento para pequenos hotéis.</p>
+        <a href="https://github.com/LuEdu3/Gerenciador-De-Hotel" target="_blank">Ver no GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>Cadastrar_Tarefas</h3>
+        <p>Aplicação para cadastro, edição e organização de tarefas com prioridade.</p>
+        <a href="https://github.com/LuEdu3/Cadastrar_Tarefas" target="_blank">Ver no GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>Meus_Gastos</h3>
+        <p>Gerenciador de finanças pessoais (repositório privado).</p>
+        <a href="#">Mais detalhes</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="card contact" id="contact">
+    <h2>Contato</h2>
+    <form id="contactForm" method="post" action="/api/contact">
+      <label for="name">Nome</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Mensagem</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+
+      <button type="submit" class="btn">Enviar</button>
+    </form>
+    <div id="formStatus" class="status"></div>
+  </section>
+
+  <section class="card extra" id="extra">
+    <h2>Outros</h2>
+    <p>Seções extras possíveis: Depoimentos, Skills, Experiência, Blog e Linha do tempo.</p>
+  </section>
+</main>
